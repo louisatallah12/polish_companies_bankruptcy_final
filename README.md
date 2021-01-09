@@ -1,6 +1,6 @@
 # polish companies bankruptcy
 
-## Concept
+## The study
 
 This challenge is about the bankruptcy prediction. A classification study with unbalanced classes.
 The 5 initial arff files are converted to 5 csv files in order to conceive the dataframe.
