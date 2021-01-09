@@ -9,12 +9,12 @@ from flask import Flask, request, flash, render_template, redirect, url_for
 
 class MyForm(FlaskForm):
     year = IntegerField("year", validators= [ DataRequired()])
-    Attr61 = FloatField("sales / receivables", validators=[ DataRequired()])
-    Attr55 = FloatField("working capital", validators=[ DataRequired()])
-    Attr39 = FloatField("profit on sales / sales", validators=[ DataRequired()])
-    Attr27 = FloatField("profit on operating activities / financial expenses", validators=[ DataRequired()])
-    Attr21 = FloatField("sales (n) / sales (n-1)", validators=[ DataRequired()])
-    Attr15 = FloatField("(total liabilities * 365) / (gross profit + depreciation)", validators=[ InputRequired()])
+    Attr63 = FloatField("sales / short-term liabilities", validators=[ DataRequired()])
+    Attr46 = FloatField("(current assets - inventory) / short-term liabilities", validators=[ DataRequired()])
+    Attr40 = FloatField("(current assets - inventory - receivables) / short-term liabilities", validators=[ DataRequired()])
+    Attr33 = FloatField("operating expenses / short-term liabilities", validators=[ DataRequired()])
+    Attr25 = FloatField("(equity - share capital) / total assets", validators=[ DataRequired()])
+    Attr16 = FloatField("(gross profit + depreciation) / total liabilities", validators=[ InputRequired()])
 
     submit = SubmitField("Submit")
 
