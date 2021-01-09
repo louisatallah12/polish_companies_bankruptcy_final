@@ -1,0 +1,39 @@
+
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% from "_formhelpers.html" import render_field %}
+{% block content %}
+  <div class="container">
+    <h1>Welcome to the polish companies bankruptcy predictors </h1>
+
+  <h3>Please fill in the following form to know whether your company is expected to prosper or not
+  </h3>
+<hr>
+<form action="" method="post" class="form" role="form">
+ <d1>
+   {{ render_field(form.Attr15, class='form-control') }}
+   {{ render_field(form.Attr21, class='form-control') }}
+   {{ render_field(form.Attr27, class='form-control') }}
+   {{ render_field(form.Attr39, class='form-control') }}
+   {{ render_field(form.Attr55, class='form-control') }}
+   {{ render_field(form.Attr61, class='form-control') }}
+   {{ render_field(form.year, class='form-control') }}
+
+   <label for="year">Year of the study (between 2007 and 2012) <br>
+    <input type="radio" id="1" name="year" value="1">
+    <label for="1">1st</label><br>
+    <input type="radio" id="2" name="year" value="2">
+    <label for="2">2nd</label><br>
+    <input type="radio" id="3" name="year" value="3">
+    <label for="3">3rd</label><br>
+    <input type="radio" id="4" name="year" value="4">
+    <label for="4">4th</label><br>
+    <input type="radio" id="5" name="year" value="5">
+    <label for="5">5th</label><br>
+    </label>
+ </d1>
+ <p><input type=submit class='btn btn-warning btn-block'>
+</form>
+<hr>
+</div>
+{% endblock %}

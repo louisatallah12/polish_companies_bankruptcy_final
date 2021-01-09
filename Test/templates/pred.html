@@ -1,0 +1,85 @@
+<h1>Welcome to the polish companies bankruptcy predictors </h1>
+
+<p>Please fill in the following form to know whether your company is expected to prosper or not</p>
+
+{% block page_content %}
+
+{% from "_formhelpers.html" import render_field %}
+
+
+<form method="POST" action="/predict">
+    <div>
+        <label for="Attr15">(total liabilities * 365) / (gross profit + depreciation) </label>:
+        <input class="css_class" id="Attr15" name="Attr15" type="text" value="" />
+    </div>
+
+    <p>
+
+    </p>
+    <div>
+
+        <label for="Attr21">sales (n) / sales (n-1) </label>:
+        
+        <input id="Attr21" name="Attr21" type="Attr21" value="" />
+    </div>
+    <p>
+
+    </p>
+    <div>
+        <label for="Attr27">profit on operating activities / financial expenses</label>
+        <input id="Attr27" name="Attr27" type="Attr27" value="" />
+    </div>
+    <p>
+
+    </p>
+    <div>
+        <label for="Attr39">profit on sales / sales </label>
+        <input id="Attr39" name="Attr39" type="Attr39" value="" />
+    </div>
+
+    <p>
+
+    </p>
+    <div>
+        <label for="Attr55">working capital </label>
+        <input id="Attr55" name="Attr55" type="Attr55" value="" />
+    </div>
+
+    <p>
+
+    </p>
+    <div>
+        <label for="Attr61">sales / receivables </label>
+        <input id="Attr61" name="Attr61" type="Attr61" value="" />
+    </div>
+
+    <p>
+
+    </p>
+    <div>
+        <label for="year">Year of the study (between 2007 and 2012) <br>
+            <input type="radio" id="1" name="year" value="1">
+            <label for="1">1st</label><br>
+            <input type="radio" id="2" name="year" value="2">
+            <label for="2">2nd</label><br>
+            <input type="radio" id="3" name="year" value="3">
+            <label for="3">3rd</label><br>
+            <input type="radio" id="4" name="year" value="4">
+            <label for="4">4th</label><br>
+            <input type="radio" id="5" name="year" value="5">
+            <label for="5">5th</label><br>
+        </label>
+    </div>
+
+    <p>
+
+    </p>
+    <div>
+        <input type="Submit" value="Predict">
+      </div>
+</form>
+
+{% endblock %}
+
+    
+   
