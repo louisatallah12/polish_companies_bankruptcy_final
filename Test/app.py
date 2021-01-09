@@ -19,7 +19,7 @@ def page_not_found(e):
 
 """
 
-model = joblib.load("model")
+model = joblib.load("LR")
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
     form = MyForm(request.form)
@@ -28,12 +28,12 @@ def predict():
 
     if request.method == 'POST'  :
         
-        liste.append(form.Attr15.data)
-        liste.append(form.Attr21.data)
-        liste.append(form.Attr27.data)
-        liste.append(form.Attr39.data)
-        liste.append(form.Attr55.data)
-        liste.append(form.Attr61.data)
+        liste.append(form.Attr16.data)
+        liste.append(form.Attr25.data)
+        liste.append(form.Attr33.data)
+        liste.append(form.Attr40.data)
+        liste.append(form.Attr46.data)
+        liste.append(form.Attr63.data)
         liste.append(form.year.data)
         p = model.predict(pd.DataFrame(liste))[0]
         if p == 1 :
