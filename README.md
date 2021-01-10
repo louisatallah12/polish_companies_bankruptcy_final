@@ -14,5 +14,6 @@ The final notebook is named final_version.py.
 It contains all the study from the data preprocessing step to the fitting models step
 
 ## Building the API
-I have implemented the flask API by using the decision tree classifier model with the most important features resulting of a seven feature model.
+I have implemented the flask API by using the logistic regression model with the most important features resulting of a seven feature model.
 The API is located in the Test folder with the requirements.txt.
+The model imported for the flask application is the file named LR.
